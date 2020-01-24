@@ -53,30 +53,6 @@ export default function Example() {
       <FormContainer>
         <form>
           {createDynamicForm(colNames)}
-          {/* First Name:
-					<input
-						type={"text"}
-						value={state.firstName}
-						name={"firstName"}
-						onChange={onChange}
-					/>
-					<br />
-					Last Name{" "}
-					<input
-						type={"text"}
-						value={state.lastName}
-						name={"lastName"}
-						onChange={onChange}
-					/>
-					<br />
-					Middle Name{" "}
-					<input
-						type={"text"}
-						value={state.middleName}
-						name={"middleName"}
-						onChange={onChange}
-					/>
-					<br /> */}
         </form>
         <p>Name: {state.firstName}</p>
         <button onClick={currentState}>Check State</button>
