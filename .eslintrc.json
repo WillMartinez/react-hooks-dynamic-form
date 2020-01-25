@@ -1,11 +1,19 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
     },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
     "extends": [
         "plugin:react/recommended",
-        "standard"
+        "eslint:recommended"
+        // "standard"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -13,14 +21,59 @@
     },
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "modules": true
         },
-        "ecmaVersion": 2018,
+        "ecmaVersion": 8,
         "sourceType": "module"
     },
     "plugins": [
         "react"
     ],
     "rules": {
+        "react/no-unknown-property": "error",
+        "react/no-unused-prop-types": "error",
+        "react/prop-types": 1,
+        "react/react-in-jsx-scope": "error",
+        "react/jsx-indent": [
+            1,
+            "tab"
+        ],
+        "react/jsx-indent-props": [
+            1,
+            "tab"
+        ],
+        "react/jsx-boolean-value": [
+            1,
+            "always"
+        ],
+        "jsx-quotes": [
+            2,
+            "prefer-double"
+        ],
+        "indent": [
+            1,
+            "tab",
+            {
+                "SwitchCase": 1,
+                "ignoredNodes": [
+                    "JSXElement",
+                    "JSXElement > *",
+                    "JSXAttribute",
+                    "JSXIdentifier",
+                    "JSXNamespacedName",
+                    "JSXMemberExpression",
+                    "JSXSpreadAttribute",
+                    "JSXExpressionContainer",
+                    "JSXOpeningElement",
+                    "JSXClosingElement",
+                    "JSXText",
+                    "JSXEmptyExpression",
+                    "JSXSpreadChild"
+                ]
+            }
+        ],
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2
     }
 }
