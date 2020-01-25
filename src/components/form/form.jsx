@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import uuid from "uuid"
+// import uuid from "uuid"
 
 // Create a Wrapper component that'll render a <section> tag with some styles
 const FormContainer = styled.section`
@@ -9,8 +9,8 @@ const FormContainer = styled.section`
   display: flex;
 `;
 
-export default function Example() {
-	const colNames = ["password", "key", "username"];
+export default function DynamicForm() {
+	const colNames = ['password', "key", "username"];
 	let dynamicState = {};
 
 	const createDynamicState = colNames => {
@@ -38,7 +38,7 @@ export default function Example() {
       <div key={`meow ${item}`}>
         {item}
 				<input
-					key={uuid.v4}
+					key={item}
           type={"text"}
           value={state[item]}
           name={item}

@@ -1,12 +1,12 @@
 import React from 'react';
-import Example from './components/form/form';
+import Main from "./components/main/main";
 
 function App() {
-  return (
+  return ( 
     <div>
-      <Example/>
+      <Main/>
     </div>
   );
-}
+} 
 
 export default App;
