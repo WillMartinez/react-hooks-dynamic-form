@@ -24,7 +24,7 @@
             "jsx": true,
             "modules": true
         },
-        "ecmaVersion": 8,
+        "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "plugins": [
