@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FormContainer, Form, Input, InputRow, Title, Button } from "./style"
+import { FormContainer, Form, Input, InputRow, Title, Button, Modal, Buttons} from "./style"
 import PropTypes from 'prop-types'
 
 DynamicForm.propTypes = {
@@ -43,11 +43,16 @@ export default function DynamicForm(props) {
 	
 	const {colNames} = props
 	return (
-		<FormContainer>
-			<Form>
-				{createDynamicForm(colNames)}
-			</Form>
-			<Button key={"button".concat(colNames)} onClick={consoleLogState}>Log State</Button>
-		</FormContainer>
+		<Modal>
+			<FormContainer>
+				<Form>
+					{createDynamicForm(colNames)}
+				</Form>
+			</FormContainer>
+			<Buttons>
+				<Button key={"button".concat(colNames)} onClick={consoleLogState}>Submit</Button>
+				<Button key={"button".concat(colNames)} onClick={consoleLogState}>Cancel</Button>
+			</Buttons>
+		</Modal>
 	)
 }
